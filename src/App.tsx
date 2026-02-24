@@ -19,9 +19,7 @@ import {
   Users,
   Rat,
   Bug,
-  Bird,
   Mail,
-  Building2,
   TreePine,
   Leaf
 } from 'lucide-react';
