@@ -41,8 +41,6 @@ const CONFIG = {
   region: 'Heidelberg & Rhein-Neckar',
   yearsExperience: '25',
   responseTime: '24 Stunden',
-  googleRating: '5.0',
-  googleReviewCount: '15+',
   hours: {
     weekdays: 'Mo-Fr: 8:00 - 18:00 Uhr',
     saturday: 'Sa: Nach Vereinbarung'
@@ -188,10 +186,8 @@ export default function App() {
               className="relative z-10"
             >
               <div className="inline-flex items-center gap-2 mb-6 badge-trust">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3 fill-current" />)}
-                </div>
-                <span className="text-slate-600">{CONFIG.googleRating}/5 Google Bewertung ({CONFIG.googleReviewCount} Bewertungen)</span>
+                <Award className="size-4 text-brand-accent" />
+                <span className="text-slate-600">IHK geprüfter Schädlingsbekämpfer</span>
               </div>
 
               <h1 className="text-5xl lg:text-6xl font-bold text-brand-primary leading-[1.1] mb-6 tracking-tight">
@@ -430,20 +426,9 @@ export default function App() {
       {/* Testimonials */}
       <section id="testimonials" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div className="max-w-xl">
-              <h2 className="text-sm font-bold text-brand-accent uppercase tracking-[0.2em] mb-4">Kundenstimmen</h2>
-              <h3 className="text-4xl font-bold text-brand-primary">Das sagen unsere Kunden</h3>
-            </div>
-            <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-              <div className="text-right">
-                <p className="font-bold text-brand-primary">Ausgezeichnet {CONFIG.googleRating}/5</p>
-                <p className="text-xs text-slate-500">Basierend auf {CONFIG.googleReviewCount} Google Bewertungen</p>
-              </div>
-              <div className="bg-white p-2 rounded-lg shadow-sm">
-                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" className="h-4" />
-              </div>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-bold text-brand-accent uppercase tracking-[0.2em] mb-4">Kundenstimmen</h2>
+            <h3 className="text-4xl font-bold text-brand-primary">Das sagen unsere Kunden</h3>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
